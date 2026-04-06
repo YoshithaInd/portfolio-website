@@ -19,7 +19,7 @@ justify-content: center;
 gap: 5rem;
 background-color: rgba(0, 0, 0, 0.8);
 backdrop-filter: blur(8px);
-color: white;
+color: beige;
 padding: 0.5rem 1.5rem;
 border-radius: 3rem;
 z-index: 1000;
@@ -70,7 +70,7 @@ border-radius: 3rem;
 border: none;
 font-weight: 500;
 font-size: 1rem;
-color: white;
+/* color: white; */
 cursor: pointer;
 text-wrap: nowrap;
 transition: 0.3s ease-in-out;
@@ -175,6 +175,124 @@ transition: 8.2s ease-in-out;
 .socials i:hover{
 transform: scale(1.1);
 }
+
+.section-title{
+text-align: center;
+font-size: 4rem;
+font-weight: 600;
+margin-bottom: 3rem;
+}
+
+.experience-info{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 5rem;
+
+}
+
+.experience img{
+width: 24vw;
+border-radius: 3rem;
+}
+
+.grid{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap: 2rem;
+}
+
+.grid-card{
+border: 2px solid black;
+border-radius: 3rem;
+padding: 3rem;
+display: flex;
+flex-direction: column;
+align-items: baseline;
+justify-content: left;
+cursor: pointer;
+transition: 0.2s ease-in-out;
+}
+
+.grid-card:hover{
+transform: scale(1.02);
+background-color: black;
+color: white;
+}
+
+.grid-card i{
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+
+.grid-card span{
+font-size: 1.5rem;
+font-weight: 500;
+background: linear-gradient(to right, #009dff, #ffeeff);
+background-clip:
+text;
+color: transparent;
+}
+
+::-webkit-scrollbar{
+width: 20px;
+}
+::-webkit-scrollbar-track{
+background-color: rgb(219, 219, 219);
+}
+::-webkit-scrollbar-thumb {
+background: linear-gradient(to bottom, #009dff, #ffeeff);
+}
+
+.education-grid{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+}
+
+.education-card{
+padding: 3rem 2rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+gap: 1.5rem;
+border: 2px solid black;
+border-radius: 3rem;
+cursor: pointer;
+transition: 0.3s ease-in-out;
+}
+
+.education-card:hover{
+background-color:
+black;
+color: white;
+transform: translateY(-10px) scale(1.82);
+}
+
+.input-box{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+gap: 2rem;
+margin-top: 5rem;
+}
+
+.input-box input{
+position: relative;
+border-radius: 3rem;
+border: 2px solid black;
+padding: 2rem Brem;
+font-size: 3rem;
+}
+
+.input-box input::placeholder{
+font-size: 3rem;
+}
+
 
 
 

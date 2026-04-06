@@ -1,22 +1,42 @@
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    });
+//--Navigating & Animations--//
+
+//function for scroll when click Title to sections
+const navMap = {
+        "goOverview": "overview",
+        "about-title": "about",
+        "education-title": "education", 
+        "skills-title": "skill",
+        "projects-title": "project",
+        "downloads-title": "downloads",
+        "publications-title": "publications",
+        "contact-title": "contact"
+};
+
+Object.entries(navMap).forEach(([buttonId, sectionId]) => {
+        document.getElementById(buttonId).addEventListener("click",()=> goTo(sectionId));
 });
 
-// Navbar scroll effect
-window.addEventListener('scroll', function () {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.15)';
-    } else {
-        navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-    }
-});
 
-// ... Paste the rest of your JavaScript here ...
+//function for scroll from header butons to sections
+function goTo(sectionId){
+        document.getElementById(sectionId).scrollIntoView({
+                behavior:"smooth"
+        });
+}
+
+
+//--Project & Publication Section--Dropdown//
+const cards = document.querySelectorAll(".publication-card , .project-card");
+
+cards.forEach(card =>{
+card.addEventListener("click", () => {
+
+        // Close others (optional)
+        cards.forEach(c => {
+        if (c !== card) c.classList.remove("active");
+        });    
+        
+        // Toggle clicked one
+        card.classList.toggle("active");
+})
+});
